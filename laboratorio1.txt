@@ -1,0 +1,44 @@
+void main() {
+  String nombre = "Erick";
+  var apellido = "Galindo";
+  String saludo = "Hola, $nombre";
+  String despedida = "Adiós, $apellido";
+
+  print(saludo);
+  print(despedida);
+
+  List<int> numeros = [1, 2, 3, 4, 5];
+  numeros.add(6);
+
+  int mayor = numeros[0]; // Inicializa el mayor correctamente
+  int menor = numeros[0]; // Inicializa el menor correctamente
+  int suma = numeros[0]; // Variable para la suma total
+  int sumaPares = numeros[0]; // Variable para la suma de números pares
+  int sumaImpares = numeros[0]; // Variable para la suma de números impares
+
+  // Sumar los números, pares, impares y encontrar el mayor
+  for (var numero in numeros) {
+    suma += numero; // Sumar el número a la variable suma
+
+    // Sumar números pares o impares
+    if (numero % 2 == 0) {
+      sumaPares += numero; // Si el número es par, sumar a sumaPares
+    } else {
+      sumaImpares += numero; // Si el número es impar, sumar a sumaImpares
+    }
+
+    if (numero > mayor) {
+      mayor = numero; // Actualizar el mayor
+    }else{
+      menor = numero;
+    }
+  }
+
+  // Imprimir la lista, el número mayor, la suma total, la suma de pares e impares
+  print("Lista de números: $numeros");
+  print("Número mayor: $mayor");
+  print("Número menor: $menor");
+  print("Suma total de los números: $suma");
+  print("Suma de los números pares: $sumaPares");
+  print("Suma de los números impares: $sumaImpares");
+}
